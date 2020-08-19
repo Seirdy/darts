@@ -22,7 +22,7 @@ PROJECT_URLS = {
 
 setup(
       name='u8darts',
-      version="0.2.3",
+      version="dev",
       description='A python library for easy manipulation and forecasting time series.',
       long_description=LONG_DESCRIPTION,
       long_description_content_type="text/markdown",
@@ -33,6 +33,9 @@ setup(
       license='Apache License 2.0',
       packages=find_packages(),
       install_requires=read_requirements('requirements/main.txt'),
+      package_data={
+          'darts': ['py.typed'],
+      },
       zip_safe=False,
       python_requires='>=3.6',
       classifiers=[
